@@ -26,4 +26,4 @@ aparecerá un boton el cual está oculto hasta que se busque una oferta la cual 
 mas bonita pero no tuve el tiempo suficiente para hacerlo.
 
 PostMan:
-La Url está en el otro branch
+https://documenter.getpostman.com/view/29807283/2s9YJgSKXm
