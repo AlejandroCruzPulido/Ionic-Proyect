@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>car-update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-item>
+  <ion-label position="floating">Marca</ion-label>
+  <ion-input [(ngModel)]="car.marca" name="marca" type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Modelo</ion-label>
+  <ion-input [(ngModel)]="car.modelo" name="modelo" type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Precio</ion-label>
+  <ion-input [(ngModel)]="car.precio" name="precio" type="number"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Descripción</ion-label>
+  <ion-textarea [(ngModel)]="car.descripcion" name="descripcion"></ion-textarea>
+</ion-item>
+
+<ion-button (click)="updateCar()">Guardar Cambios</ion-button>
+
+</ion-content>

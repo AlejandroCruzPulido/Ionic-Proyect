@@ -1,0 +1,30 @@
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>car-list</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-searchbar [(ngModel)]="searchParams.marca" placeholder="Buscar por marca"></ion-searchbar>
+  
+    <ion-button (click)="searchCarsByMarca()" expand="full">Buscar</ion-button>
+
+    <ion-list>
+      <ion-item *ngFor="let c of cars">
+        <ion-label>
+          <h1>{{c.marca}}</h1>
+          Modelo: {{c.modelo}}
+          Precio: {{c.precio}}
+          Descripcion: 
+          {{c.descripcion}}
+        </ion-label>
+        <ion-button (click)="editCar(c.id)">Modificar oferta</ion-button>
+        <ion-button (click)="deleteCar(c.id)">Eliminar</ion-button>
+      </ion-item>
+      <ion-button *ngIf="showAllButtonVisible" (click)="showAllCars()" expand="full">Ver todas las ofertas</ion-button>
+    </ion-list>
+  </ion-content> 
+
+  <ion-footer>
+    <ion-button (click)="gotoCarAdd()" expand="full">Añadir nuevo coche</ion-button>
+  </ion-footer>
